@@ -1,0 +1,41 @@
+<%- include("layouts/header")  %> 
+<%- include("layouts/navigation") %> 
+
+    <h1>Daftar Mahasiswa</h1>
+
+    <!-- <%= mahasiswa %>  -->
+
+    <!-- <ul>
+        <li>Nama : Aulia Rahman Zulfi</li>
+        <li>NIM : 119140110</li>
+        <li>Prodi : Teknik Informatika</li>
+    </ul> -->
+
+
+
+    <!-- <% if (mahasiswa.length < 1) { %>
+        <p>Data Mahasiswa masih kosong</p>
+    <% } else{ %>
+        <% mahasiswa.forEach(mhs => { %>
+            <ul>
+                <li>Nama : <%= mhs.nama %> </li>
+                <li>NIM : <%= mhs.nim %> </li>
+                <li>Prodi : <%= mhs.prodi %> </li>
+            </ul>
+        <% }) %>
+    <% } %>  -->
+
+
+    <% if (mahasiswa.length < 1) { %>
+        <p>Data Mahasiswa masih kosong</p>
+    <% } %>
+
+    <% mahasiswa.forEach(mhs => { %>
+        <ul>
+            <li>Nama : <%= mhs.nama %> </li>
+            <li>NIM : <%= mhs.nim %> </li>
+            <li>Prodi : <%= mhs.prodi %> </li>
+        </ul>
+    <% }) %>
+
+<%- include("layouts/footer") %> 
